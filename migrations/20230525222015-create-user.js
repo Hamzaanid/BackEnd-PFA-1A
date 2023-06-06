@@ -18,6 +18,20 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
+      password: {
+        type:Sequelize.STRING
+      },
+      numero: {
+        type: Sequelize.STRING 
+      },
+      role: {
+        type: Sequelize.ENUM('admin', 'prof', 'etudiant'),
+        allowNull: false,
+        defaultValue:'etudiant'
+      },
+      dateDeNaissance: {
+        type: Sequelize.DATEONLY // Ajout de la colonne "dateDeNaissance" de type DATEONLY
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
