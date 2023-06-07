@@ -33,7 +33,6 @@ sio.on('connection',(visitor)=>{
   visitor.on('message',(encodedData)=>{
     //logic d'insertion dans la base de donnee
     const data = JSON.parse(encodedData);
-    // console.log(data.num_available_spots);
     sio.emit('newMessage',data);
   })
 });
